@@ -1,0 +1,35 @@
+#about-me {
+    margin-bottom: var(--mb3);
+    overflow: hidden;
+    h4 {
+        color: var(--primary);
+        font: 600 2rem var(--montserrat-font);
+        padding-bottom: 8px;
+        position: relative;
+        width: fit-content;
+        margin-bottom: var(--mb);
+        &::after {
+            position: absolute;
+            content: "";
+            inset: auto auto 0 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 70%;
+            border-radius: 50%;
+            opacity: 0.3;
+            background: var(--shadow);
+        }
+    }
+    p {
+        color: var(--text-color);
+        font: 500 1rem var(--poppins-font);
+    }
+}
+
+@media (min-width: 768px) {
+    #about-me {
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}

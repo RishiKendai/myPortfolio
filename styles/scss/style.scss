@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Arima:wght@400;600&family=Kurale&family=Marck+Script&family=Montserrat:wght@500&family=Poppins:wght@400;600&display=swap");
+:root {
+  --fz: 1rem;
+  --fw: 400;
+  --default-font: system-ui;
+  --amita-font: "Amita", cursive;
+  --arima-font: "Arima", cursive;
+  --kurale-font: "Kurale", serif;
+  --montserrat-font: "Montserrat", sans-serif;
+  --poppins-font: "Poppins", sans-serif;
+  --marckscript-font: "Marck Script", cursive;
+  --mb: 14px;
+  --mb3: 3rem;
+  --device-padding: 7%;
+  --heading-color: #111;
+  --text-color: #000000b7;
+  --primary: #845ec2;
+  --shadow: #d65db1;
+  --secondary: #ff9671;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  overflow: auto;
+  padding: 0 2%;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+  padding: 0 5px;
+  &-thumb {
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #a651d3, #c895e4, #ba79dd);
+  }
+}
+
+@import "./home";
+@import "./aboutMe";
+@import "./technology";
+@import "./languages";
+@import "./projects";
+@import "./footer";
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 var(--device-padding);
+  }
+}
+@media (min-width: 992px) {
+  body {
+    --device-padding: 8%;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    --device-padding: 9%;
+  }
+}

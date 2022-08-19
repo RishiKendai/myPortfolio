@@ -1,0 +1,136 @@
+#home-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--mb3);
+    .logo {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        height: 50px;
+        width: 50px;
+        &::after {
+            position: absolute;
+            content: "";
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, -50%);
+            height: 200px;
+            width: 200px;
+            background-color: #d3b8fc;
+            opacity: 0.24;
+            filter: blur(30px);
+            z-index: -2;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .homeSection-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .section-wrapper {
+            display: flex;
+            align-items: flex-end;
+            gap: 7px;
+            font-size: 3rem;
+            font-family: var(--marckscript-font);
+            color: whitesmoke;
+            span {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: var(--primary);
+            }
+        }
+        p {
+            margin-top: -8px;
+            font: 600 1rem var(--poppins-font);
+            color: #5c4188;
+        }
+    }
+    .anime-shape1 {
+        position: absolute;
+        top: 23%;
+        left: -3%;
+        height: 250px;
+        width: 250px;
+        background-image: linear-gradient(45deg, #da4453, #89216b);
+        opacity: 0.6;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        z-index: -2;
+        transition: all 1s ease-in-out;
+    }
+    .anime-shape2 {
+        --background: #005;
+        --primary: #88d5bf;
+        --secondary: #5d6bf8;
+        --third: #e27fcb;
+
+        position: absolute;
+        right: 2%;
+        bottom: 19%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+        animation: morph 8s ease-in-out infinite;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        height: 200px;
+        transition: all 1s ease-in-out;
+        width: 200px;
+        opacity: 0.5;
+        z-index: -2;
+    }
+
+    @keyframes morph {
+        0% {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        50% {
+            border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+        }
+
+        100% {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #home-section {
+        .homeSection-body {
+            .section-wrapper {
+                gap: 20px;
+                font-size: 5rem;
+                align-items: baseline;
+                color: whitesmoke;
+                span {
+                    font-size: 6.5rem;
+                }
+            }
+            p {
+                margin-top: -24px;
+                font: 500 1.3rem var(--poppins-font);
+                letter-spacing: 2px;
+            }
+        }
+
+        .anime-shape1 {
+            top: 12%;
+            left: 19%;
+            height: 300px;
+            width: 300px;
+            opacity: 0.8;
+        }
+        .anime-shape2 {
+            right: 15%;
+            bottom: 9%;
+        }
+    }
+}

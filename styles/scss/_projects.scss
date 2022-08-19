@@ -1,0 +1,145 @@
+#project-section {
+    margin-bottom: var(--mb3);
+    display: flex;
+    flex-direction: column;
+    .projectSection-head {
+        margin-bottom: var(--mb3);
+        h3 {
+            font: 600 1.5rem var(--montserrat-font);
+            margin-bottom: var(--mb);
+            color: var(--primary);
+            width: fit-content;
+            padding-bottom: 8px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                inset: auto auto 0 50%;
+                transform: translateX(-50%);
+                height: 2px;
+                width: 70%;
+                border-radius: 50%;
+                opacity: 0.3;
+                background: var(--shadow);
+            }
+        }
+        p {
+            font: 500 1rem var(--poppins-font);
+            color: var(--text-color);
+        }
+    }
+    .projectSection-body {
+        align-self: flex-end;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        grid-column-gap: 1.7rem;
+        grid-row-gap: 3rem;
+        .project {
+            padding: var(--mb);
+            border-radius: 8px;
+            box-shadow: 0 9px 14px #00000028;
+            .project-img {
+                height: 200px;
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: var(--mb);
+                position: relative;
+                padding: 1px;
+                --shadow: #d65db287;
+                outline: 2px solid var(--shadow);
+                outline-offset: 1px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .git-link {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0.7rem;
+                    right: 0.7rem;
+                    padding: 4px;
+                    a {
+                        .fa-github {
+                            overflow: hidden;
+                            border-radius: 50px;
+                            color: whitesmoke;
+                            background: var(--heading-color);
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+            }
+            .project-title {
+                padding-left: 8px;
+                margin-bottom: 9px;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    height: 100%;
+                    opacity: 0.7;
+                    left: 0;
+                    top: 0;
+                    background-color: var(--secondary);
+                }
+                h3 {
+                    color: var(--primary);
+                    font: 600 1.3rem var(--montserrat-font);
+                }
+            }
+            .project-description {
+                p {
+                    color: var(--text-color);
+                    font: 500 0.9rem var(--poppins-font);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #project-section {
+        .projectSection-body {
+            grid-row-gap: 5rem;
+            .project {
+                .project-img {
+                    height: 240px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #project-section {
+        .projectSection-body {
+            grid-row-gap: 2rem;
+            .project {
+                .project-img {
+                    height: 220px;
+                    .git-link {
+                        position: absolute;
+                        z-index: 1;
+                        inset: 50% 0 0 50%;
+                        transform: translate(-50%, -50%);
+                        height: fit-content;
+                        width: fit-content;
+                        opacity: 0;
+                        transition: all 0.4s;
+                        a {
+                            .fa-github {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                    &:hover .git-link {
+                        opacity: 1;
+                        transition-delay: 0.1s;
+                    }
+                }
+            }
+        }
+    }
+}

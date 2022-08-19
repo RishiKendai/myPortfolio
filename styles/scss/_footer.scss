@@ -1,0 +1,199 @@
+#footer-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    margin-bottom: var(--mb);
+    grid-row-gap: var(--mb3);
+    overflow: hidden;
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: hsla(360, 100%, 100%, 0.22);
+        h4 {
+            color: var(--secondary);
+            font: 700 1.7rem var(--kurale-font);
+            letter-spacing: 1.5px;
+        }
+        p {
+            color: var(--text-color);
+            font: 500 1.1rem var(--arima-font);
+        }
+        .media-section {
+            margin: var(--mb) 0;
+            display: flex;
+            gap: 14px;
+            a {
+                padding: 9px 8px;
+                border-radius: 8px;
+                background-color: var(--primary);
+                box-shadow: 0 6px 14px var(--primary), inset 3px 3px 5px hsla(360, 100%, 100%, 0.32),
+                    inset -3px -3px 5px hsla(0, 0%, 0%, 0.12);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                height: 2.8rem;
+                width: 2.5rem;
+                .fa-brands {
+                    font-size: 1.3rem;
+                    color: var(--secondary);
+                }
+            }
+        }
+    }
+    .right {
+        padding: var(--mb) 0;
+        position: relative;
+        overflow: hidden;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            height: max-content;
+            width: 350px;
+            border-radius: 3px;
+            padding: var(--mb) 0;
+            background: hsla(360, 100%, 100%, 0.28);
+            .head {
+                margin: auto;
+                h3 {
+                    font: 700 1.5rem var(--kurale-font);
+                    color: var(--secondary);
+                    letter-spacing: 1.5px;
+                    margin-bottom: var(--mb);
+                }
+            }
+            .textInput {
+                margin: auto;
+                position: relative;
+                width: 90%;
+                height: 50px;
+                margin-bottom: var(--mb);
+                border-bottom: 1px solid var(--primary);
+
+                input,
+                textarea {
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    padding-top: 24px;
+                    font: 400 1rem var(--default-font);
+                    color: var(--text-color);
+                }
+                label {
+                    position: absolute;
+                    left: 0;
+                    bottom: 5px;
+                    --text-color: hsl(0, 0%, 0%, 0.34);
+                    color: var(--text-color);
+                    font: 400 0.9rem var(--poppins-font);
+                    letter-spacing: 1.5px;
+                    pointer-events: none;
+                    z-index: 2;
+                    transition: all 0.4s;
+                }
+                input:focus + label,
+                textarea:focus + label,
+                input:not(:placeholder-shown) + label,
+                textarea:not(:placeholder-shown) + label {
+                    opacity: 0;
+                }
+
+                &.textArea {
+                    height: 70px;
+                    padding: 6px;
+                    textarea {
+                        resize: none;
+                        padding: 0;
+                        &::-webkit-scrollbar {
+                            width: 6px;
+                            background-color: transparent;
+                            padding: 0 5px;
+                            &-thumb {
+                                background: var(--text-color);
+                            }
+                        }
+                    }
+                }
+            }
+            button {
+                width: 60%;
+                margin: var(--mb) auto 0;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                border-radius: 3px;
+                font: 800 1.5rem/2 var(--kurale-font);
+                letter-spacing: 1.5px;
+                background: var(--secondary);
+                color: white;
+                box-shadow: 0 9px 18px var(--secondary);
+                transition: all 0.4s;
+                &:hover,
+                &:active {
+                    transform: translateY(-4px);
+                    box-shadow: 0 16px 28px var(--secondary);
+                    color: var(--text-color);
+                }
+                &.wait {
+                    pointer-events: none;
+                    user-select: none;
+                }
+            }
+        }
+    }
+    .msg-box {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: -25px;
+        opacity: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #343434;
+        color: whitesmoke;
+        width: 380px;
+        height: 100px;
+        padding: 0.75rem;
+        border-radius: 6px;
+        z-index: 2;
+        transition: all 0.4s;
+        &.show {
+            top: 15px;
+            opacity: 1;
+        }
+        h3 {
+            font: 500 1.2rem var(--poppins-font);
+            letter-spacing: 1.2px;
+            margin-bottom: 5px;
+        }
+        button {
+            margin-left: auto;
+            background: var(--primary);
+            cursor: pointer;
+            color: #d6c8ed;
+            padding: 0.2rem 0.98rem;
+            border: none;
+            outline: none;
+            border-radius: 0.2rem;
+            font: 600 1rem var(--poppins-font);
+            transition: all 0.3s;
+            &:hover,
+            &:active {
+                color: #e3daf3;
+                background: #694a9b;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #footer-section {
+        .left {
+            align-items: center;
+        }
+    }
+}

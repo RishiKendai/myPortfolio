@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rishi kesh</title>
+        <!-- icon -->
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+        <!-- Libraries -->
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script defer src="./js/aos.js"></script>
+        <!-- Sphere JS -->
+        <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+        <script defer src="./js/sphere.js"></script>
+        <!-- JOKE API -->
+        <script defer src="./js/jokeAPI.js"></script>
+        <!-- Mail API -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script defer src="./js/mailAPI.js"></script>
+
+        <!-- OwlCarousel2 JS -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="./js/owlCarousel.js"></script>
+        <!-- OwlCarousel2 CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+            integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./styles/css/style.css">
+    </head>
+
+    <body>
+        <!-- Home Page -->
+        <div id="home-section">
+            <!-- Head -->
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+            </div>
+            <!-- Body -->
+            <div class="homeSection-body">
+                <div class="section-wrapper" data-aos="fade-up" data-aos-duration="800">
+                    I'm<span>Rishikesh</span>
+                </div>
+                <p data-aos="fade-up-left" data-aos-duration="1000">Web developer | Programmer</p>
+            </div>
+            <div class="anime-shape1" data-aos="fade-up-left"></div>
+            <div class="anime-shape2" data-aos="fade-up-right"></div>
+        </div>
+        <!-- Aboutme section -->
+        <div id="about-me">
+            <h4 data-aos="fade-down-right" data-aos-duration="900">About me</h4>
+            <p data-aos="fade-up-left" data-aos-duration="1000">I'm a passionate and motivated person. Everyday's
+                inspiration keeps me
+                pushing towards my goal. Discipline attitude makes me having a good work ethic. Good leadership
+                skill lead me
+                to be a respected person.</p>
+        </div>
+        </div>
+        <!-- Technologies section -->
+        <div id="technologies">
+            <h3 data-aos="zoom-in-up" data-aos-duration="1200">I am currently working in these technologies</h3>
+            <span class="sphere" data-aos="fade-up" data-aos-duration="1200"></span>
+        </div>
+        <!-- Language Section -->
+        <div id="language-section">
+            <!-- Joke API -->
+            <div class="joke-section" data-aos="fade-up" data-aos-duration="800">
+                <h2>Joke of the day. <button class='restJoke'>New Joke</button></h2>
+                <div class="joke"></div>
+            </div>
+            <!-- head -->
+            <div class="head">
+                <h3 data-aos="fade-up" data-aos-duration="900">Language slider</h3>
+                <p data-aos="fade-up-left" data-aos-duration="1000">Most good programmers do programming not because
+                    they
+                    expect to get paid or get
+                    adulation by the
+                    public, but because it is fun to program. </p>
+            </div>
+            <!-- body -->
+            <div class="owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1000">
+                <!-- lang1 -->
+                <div class=" item">
+                    <div class="lang">
+                        <div class="lang-img">
+                            <img src="./assets/JavaScript.png" alt="">
+                        </div>
+                        <div class="lang-title">
+                            <h3>Javascript</h3>
+                            <div class="stars " rating='4'>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="lang-body">
+                            <div class="wrapper">
+                                <span>Preference</span>
+                                <p>1</p>
+                            </div>
+                            <div class="wrapper">
+                                <span>core</span>
+                                <p>4.5 / 5</p>
+                            </div>
+                            <div class="wrapper">
+                                <span>Projects</span>
+                                <p>Yes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- lang1 ends -->
+                <!-- lang2 -->
+                <div class="item">
+                    <div class="lang">
+                        <div class="lang-img">
+                            <img src="./assets/java.png" alt="">
+                        </div>
+                        <div class="lang-title">
+                            <h3>Java</h3>
+                            <div class="stars " rating='3.5'>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="lang-body">
+                            <div class="wrapper">
+                                <span>Preference</span>
+                                <p>2</p>
+                            </div>
+                            <div class="wrapper">
+                                <span>core</span>
+                                <p>4 / 5</p>
+                            </div>
+                            <div class="wrapper">
+                                <span>Projects</span>
+                                <p>Yes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- lang2 ends -->
+                <!-- lang3 -->
+                <div class="item">
+                    <div class="lang">
+                        <div class="lang-img">
+                            <img src="./assets/c.png" alt="">
+                        </div>
+                        <div class="lang-title">
+                            <h3>C</h3>
+                            <div class="stars " rating='4'>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="lang-body">
+                            <div class="wrapper">
+                                <span>Preference</span>
+                                <p>3</p>
+                            </div>
+                            <div class="wrapper">
+                                <span>core</span>
+                                <p>3.5 / 5</p>
+                            </div>
+                            <div class="wrapper">
+                                <span>Projects</span>
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- lang3 ends -->
+                <!-- lang4 -->
+                <div class="item">
+                    <div class="lang">
+                        <div class="lang-img">
+                            <img src="./assets/c++.png" alt="">
+                        </div>
+                        <div class="lang-title">
+                            <h3>C++</h3>
+                            <div class="stars " rating='3.5'>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="lang-body">
+                            <div class="wrapper">
+                                <span>Preference</span>
+                                <p>4</p>
+                            </div>
+                            <div class="wrapper">
+                                <span>core</span>
+                                <p>3 / 5</p>
+                            </div>
+                            <div class="wrapper">
+                                <span>Projects</span>
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- lang4 ends -->
+            </div>
+        </div>
+        <!-- Projects Section -->
+        <div id="project-section">
+            <!-- Head -->
+            <div class='projectSection-head'>
+                <h3 data-aos="fade-right" data-aos-duration="800">My Gallery</h3>
+                <p data-aos="fade-up" data-aos-duration="950">A small gallery of recent projects done by me. I've done
+                    them all by learning from
+                    various
+                    platforms
+                    and getting
+                    inspired by others.</p>
+            </div>
+            <!-- Body -->
+            <div class="projectSection-body">
+                <!--  -->
+                <div class="project" data-aos="zoom-in-up" data-aos-duration="1000">
+                    <div class="project-img">
+                        <img src="./assets/TicTacToe.png" alt="">
+                        <div class="git-link">
+                            <a href="https://github.com/RishiKendai/TicTacToe" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <h3>Tic Tac Toe</h3>
+                    </div>
+                    <div class="project-description">
+                        <p>A classic game loved by everyone around world, enjoyed myself while developing the game.
+                        </p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="project" data-aos="zoom-in-up" data-aos-duration="1000">
+                    <div class="project-img">
+                        <img src="./assets/quiz.png" alt="">
+                        <div class="git-link">
+                            <a href="https://github.com/RishiKendai/quizApp" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <h3>Responsive Quiz</h3>
+                    </div>
+                    <div class="project-description">
+                        <p>Making a quiz game is one the default for all beginners who start their journey in web.
+                            Even
+                            I was no exceptional, I have created simple responsive quiz app.</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="project" data-aos="zoom-in-up" data-aos-duration="1000">
+                    <div class="project-img">
+                        <img src="./assets/chatapp.png" alt="">
+                        <div class="git-link">
+                            <a href="https://github.com/RishiKendai/chaxapp" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <h3>ChaXapp</h3>
+                    </div>
+                    <div class="project-description">
+                        <p>A simple chat application where we can chat with our friends in real time with less
+                            latency
+                            and change your dp and use stickers and even more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <div id="footer-section">
+            <div class="msg-box">
+                <h3></h3>
+                <button>OK</button>
+            </div>
+
+            <!-- left -->
+            <div class="left" data-aos="fade-right" data-aos-duration="1200">
+                <div class="wrapper">
+                    <span>
+                        <h4>Let's have a talk!</h4>
+                        <p>You can share your thoughts with me. Feel free to contact me.</p>
+                    </span>
+                    <div class="media-section">
+                        <a href="https://github.com/RishiKendai" target='_blank'>
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rishi-kesh-a459b2196" target='_blank'>
+                            <!-- <i class="fa-brands fa-linkedin"></i> -->
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/i_rishi.kesh/"" target='_blank'>
+                            <i class= " fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Right -->
+            <div class="right" data-aos="fade-left" data-aos-duration="1200">
+                <form>
+                    <div class="head">
+                        <h3>Send me a message</h3>
+                    </div>
+                    <!-- User name -->
+                    <div class="textInput">
+                        <input name='username' type="text" spellcheck='false' placeholder=' '>
+                        <label>Name</label>
+                    </div>
+                    <!-- Email -->
+                    <div class="textInput">
+                        <input const name='mailID' type='email' required spellcheck='false' placeholder=' '>
+                        <label>Mail ID</label>
+                    </div>
+                    <!-- Message -->
+                    <div class="textInput textArea">
+                        <textarea name='message' spellcheck='false' placeholder=' '></textarea>
+                        <label>Share your thoughts</label>
+                    </div>
+                    <!-- Send -->
+                    <button type='submit' name='send'>Send</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>

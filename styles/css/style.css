@@ -76,10 +76,10 @@ body::-webkit-scrollbar-thumb {
           transform: translate(-50%, -50%);
   height: 200px;
   width: 200px;
-  background-color: #d3b8fc;
-  opacity: 0.24;
-  -webkit-filter: blur(30px);
-          filter: blur(30px);
+  background: #d3b8fc5f;
+  opacity: 0.34;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
   z-index: -2;
 }
 

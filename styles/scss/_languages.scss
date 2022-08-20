@@ -10,8 +10,8 @@
             margin-bottom: var(--mb);
             display: flex;
             gap: 25px;
-            .restJoke {
-                font: 600 0.9rem var(--montserrat-font);
+            .nextJoke {
+                font: 600 0.9rem/1.4 var(--montserrat-font);
                 color: white;
                 background-color: var(--secondary);
                 letter-spacing: 1.4px;
@@ -20,29 +20,29 @@
                 border: none;
                 padding: 4px 9px;
                 cursor: pointer;
-                box-shadow: 0 6px 14px var(--secondary);
+                box-shadow: 0 5px 9px var(--secondary);
             }
         }
         .joke {
-            --primary: #49189972;
+            --primary: #3b039472;
             background-color: var(--primary);
             border-radius: 4px;
             padding: 7px 10px;
             h4 {
                 font: 400 1.2rem var(--default-font);
-                color: ivory;
+                color: white;
             }
             .setup {
                 font: 500 1.2rem var(--default-font);
                 color: white;
             }
             .delivery {
-                font: 500 1rem var(--poppins-font);
                 display: flex;
                 flex-wrap: wrap;
                 margin-top: 10px;
                 p {
-                    color: hsla(0, 100%, 100%, 0.79);
+                    font: 400 1.2rem var(--default-font);
+                    color: hsla(0, 100%, 100%, 0.89);
                 }
             }
         }
@@ -70,7 +70,7 @@
             }
         }
         p {
-            font: 400 1rem var(--poppins-font);
+            font: 350 0.9rem var(--poppins-font);
             margin-bottom: var(--mb);
         }
     }
@@ -134,6 +134,9 @@
                         color: #ffdf00;
                     }
                     [rating="3.5"] .fa-star:nth-child(-n + 3) {
+                        color: #ffdf00;
+                    }
+                    [rating="3"] .fa-star:nth-child(-n + 3) {
                         color: #ffdf00;
                     }
                     [rating="3.5"] .fa-star:nth-child(4)::after {

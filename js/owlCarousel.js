@@ -13,8 +13,8 @@ $('.owl-carousel').owlCarousel({
       stagePadding: 0,
     },
     600: {
-      items: 2,
-      stagePadding: 60,
+      items: 2.4,
+      stagePadding: 40,
     },
     900: {
       items: 3,

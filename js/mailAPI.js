@@ -16,9 +16,9 @@ alertBtn.addEventListener('click', clearAlertBox);
 function handleAlert(msg) {
   alertBox.classList.add('show');
   alertMsg.textContent = msg;
-  setTimeout(() => {
-    clearAlertBox();
-  }, 4000);
+  // setTimeout(() => {
+  //   clearAlertBox();
+  // }, 4000);
 }
 
 function clearAlertBox() {

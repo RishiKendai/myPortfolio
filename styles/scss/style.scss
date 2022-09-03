@@ -19,6 +19,7 @@
   --secondary: #ff9671;
 }
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -27,6 +28,8 @@
 body {
   overflow: auto;
   padding: 0 2%;
+  position: relative;
+  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
   width: 6px;
@@ -37,7 +40,77 @@ body::-webkit-scrollbar {
     background: linear-gradient(to bottom, #a651d3, #c895e4, #ba79dd);
   }
 }
+.navbar {
+  z-index: 3;
+  position: fixed;
+  bottom: 0.85rem;
+  right: 0.95rem;
+  height: 38px;
+  width: 38px;
+  border-radius: 0.45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(263, 95%, 56%);
+  box-shadow: 0 8px 9px hsl(263, 95%, 59%);
+  cursor: pointer;
+  transition: transform 0.4s;
+  &.show {
+    transform: translateY(-4px);
+  }
+  #hamburger {
+    position: relative;
+    width: 28px;
+    height: 2px;
+    background: #ffffff;
 
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 80%;
+      transform: translateX(-50%);
+      background: inherit;
+      inset: 7px 0 0 50%;
+    }
+  }
+  &-menu {
+    background: hsl(263, 95%, 56%);
+    position: absolute;
+    bottom: 42px;
+    width: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    padding: 0.68rem 0.4rem;
+    border-radius: 9px;
+    transform: scale(0);
+    transform-origin: bottom center;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    &.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+    a {
+      text-decoration: none;
+      .navbar-menu-item {
+        color: hsl(263, 49%, 86%);
+        .fa-solid,
+        .fa-brands {
+          font-size: 1.2rem;
+          transition: all 350ms;
+          &:hover,
+          &:active {
+            text-shadow: 2px 2px 7px #00000088;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
 @import "./home";
 @import "./aboutMe";
 @import "./technology";

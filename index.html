@@ -22,6 +22,8 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
         </script>
         <script defer src="./js/mailAPI.js"></script>
+        <!-- Navbar js -->
+        <script defer src="./js/navbar.js"></script>
 
         <!-- OwlCarousel2 JS -->
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -41,14 +43,32 @@
             integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Font Awesome CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
         <!-- CSS -->
         <link rel="stylesheet" href="./styles/css/style.css">
     </head>
 
     <body>
+        <div class="navbar">
+            <div id="hamburger"></div>
+            <div class="navbar-menu">
+                <a href="#home-section">
+                    <div class="navbar-menu-item"><i class="fa-solid fa-house-chimney"></i></div>
+                </a>
+                <a href="#about-me">
+                    <div class="navbar-menu-item"><i class="fa-solid fa-fingerprint"></i></div>
+                </a>
+                <a href="#technologies">
+                    <div class="navbar-menu-item"><i class="fa-brands fa-react"></i></div>
+                </a>
+                <a href="#project-section">
+                    <div class="navbar-menu-item"><i class="fa-solid fa-diagram-project"></i></div>
+                </a>
+                <a href="#footer-section">
+                    <div class="navbar-menu-item"><i class="fa-solid fa-phone"></i></div>
+                </a>
+            </div>
+        </div>
         <!-- Home Page -->
         <div id="home-section">
             <!-- Body -->
@@ -70,10 +90,10 @@
                 skill lead me
                 to be a respected person.</p>
         </div>
-        </div>
         <!-- Technologies section -->
         <div id="technologies">
-            <h3 data-aos="zoom-in-up" data-aos-duration="1200">I have been currently working in these technologies</h3>
+            <h3 data-aos="zoom-in-up" data-aos-duration="1200">I have been currently working in these technologies
+            </h3>
             <span class="sphere" data-aos="fade-up" data-aos-duration="1200"></span>
         </div>
         <!-- Language Section -->
@@ -233,7 +253,8 @@
             <!-- Head -->
             <div class='projectSection-head'>
                 <h3 data-aos="fade-right" data-aos-duration="800">My Gallery</h3>
-                <p data-aos="fade-up" data-aos-duration="950">A small gallery of recent projects done by me. I've done
+                <p data-aos="fade-up" data-aos-duration="950">A small gallery of recent projects done by me. I've
+                    done
                     them all by learning from
                     various
                     platforms
